@@ -2,6 +2,7 @@ package com.demo.service;
 
 import com.demo.pojo.Schedule;
 import com.demo.utils.PageBean;
+import com.demo.utils.ResultDomain;
 
 /**
  * @program: SSM-Demo
@@ -11,4 +12,10 @@ import com.demo.utils.PageBean;
  **/
 public interface ScheduleService {
     PageBean<Schedule> findByPage(int pageSize, int currentPage);
+
+    ResultDomain removeById(Integer id);
+
+    void saveSchedule(Schedule schedule);
+
+    ResultDomain updateSchedule(Schedule schedule);
 }

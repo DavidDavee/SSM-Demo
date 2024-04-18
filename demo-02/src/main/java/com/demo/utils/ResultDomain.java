@@ -23,10 +23,23 @@ public class ResultDomain {
      */
     private Object data;
 
+    public static ResultDomain ok() {
+        ResultDomain r = new ResultDomain();
+        return r;
+    }
 
     public static ResultDomain ok(Object data) {
         ResultDomain r = new ResultDomain();
         r.data = data;
+        return r;
+    }
+
+    public static ResultDomain fail() {
+        ResultDomain r = new ResultDomain();
+        //错误码
+        r.code = 500;
+        //错误状态
+        r.flag = false;
         return r;
     }
 

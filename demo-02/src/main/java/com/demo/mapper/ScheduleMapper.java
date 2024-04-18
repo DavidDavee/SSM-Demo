@@ -14,4 +14,10 @@ import java.util.List;
 @Mapper
 public interface ScheduleMapper {
     List<Schedule> queryPage();
+
+    int delete(Integer id);
+
+    void insert(Schedule schedule);
+
+    int update(Schedule schedule);
 }

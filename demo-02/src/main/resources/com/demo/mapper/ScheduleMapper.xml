@@ -9,4 +9,18 @@
         select * from schedule
     </select>
 
+    <delete id="delete">
+        delete from schedule where id = #{id}
+    </delete>
+
+    <insert id="insert" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into schedule (title, completed)
+        values
+        (#{title}, #{completed})
+    </insert>
+
+    <update id="update">
+        update schedule set title = #{title} , completed = #{completed}
+        where id = #{id}
+    </update>
 </mapper>
